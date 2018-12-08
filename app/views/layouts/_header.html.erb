@@ -1,0 +1,10 @@
+<header>
+            <nav>
+                <% if user_signed_in? %>
+                <strong><%= link_to current_user.username, pages_show_path %></strong>
+                <li><a href="/">トップ</a></li>
+                <li><a href="">新規投稿</a></li>
+                <li><a href="">ログアウト</a></li>
+                <div class="clear"></div>
+            </nav>
+</header>
