@@ -10,12 +10,18 @@
 <header>
     <p id="logo"><a href="/">RailsCamp<span>Blog</span></a></p>
     <nav>
-        <ul>
-          <ul>
+        <ul><% if user_signed_in? %>
+                <li><a href="/">トップ</a></li>
+                <li><a href="">新規投稿</a></li>
+                <li><a href="users/sign_out">ログアウト</a></li>
+                <div class="clear"></div>
+  <% else %>
             <li><a href="/">トップ</a></li>
-            <li><a href="">新規投稿</a></li>
-            <li><a href="users/sign_out">ログアウト</a></li>
-            <div class="clear"></div>
+            <li><a href="/users/sign_up">新規登録</a></li>
+            <li><a href="/users/sign_in">ログイン</a></li>
+  <% end %>
+                
+                
         </ul>
     </nav>
     <div class="clear"></div>

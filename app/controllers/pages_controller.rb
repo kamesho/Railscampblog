@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  before_action :sign_in_required, only: [:show]
+   before_action :authenticate_user!, only: [:show]
 
-  def show
-  end
+ def show
+ end
 end

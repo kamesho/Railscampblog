@@ -4,7 +4,7 @@
                 <strong><%= link_to current_user.username, pages_show_path %></strong>
                 <li><a href="/">トップ</a></li>
                 <li><a href="">新規投稿</a></li>
-                <li><a href="">ログアウト</a></li>
+                <%= link_to "ログアウト", user_sign_out_path, method: :delete, :class => 'navbar-link'  %> 
                 <div class="clear"></div>
             </nav>
 </header>
